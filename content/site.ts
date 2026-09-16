@@ -43,6 +43,16 @@ export const footerNav = [
   },
 ];
 
+/** Footer marquee. Plain descriptions of the work — no slogans. */
+export const marquee = [
+  'Product building',
+  'SaaS',
+  'Shopify apps',
+  'Product customisation',
+  'Commerce technology',
+  'Product design',
+];
+
 export const legalNav = [
   { label: 'Terms & conditions', href: '/terms' },
   { label: 'Privacy policy', href: '/privacy' },

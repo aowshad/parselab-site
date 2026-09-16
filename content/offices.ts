@@ -11,11 +11,19 @@ export type Office = {
   timeZone: string;  // IANA
   role: string;      // what this office does
   address: string | null;
+  email: string | null;
   phone: string | null;
+  /** Free text, e.g. 'Mon–Sat · 10:00 – 19:00' */
+  hours: string | null;
+  /** True once every field above is confirmed. */
+  complete?: boolean;
 };
 
-/* Three confirmed locations. Cities and addresses are placeholders
-   until supplied — no invented street addresses. */
+/* Three confirmed locations. Dhaka is complete; the other two carry
+   placeholders until supplied — no invented street addresses. */
+
+/** The head office, used by the footer. */
+export const headOfficeId = 'bd';
 export const offices: Office[] = [
   {
     id: 'bd',
@@ -27,8 +35,11 @@ export const offices: Office[] = [
     utc: 'UTC+6',
     timeZone: 'Asia/Dhaka',
     role: 'Product, design, engineering and support. Most of the studio is here.',
-    address: null,
-    phone: null,
+    address: 'House 514, Road 7, Avenue 4, Mirpur DOHS, Dhaka 1216',
+    email: 'info@parselab.com',
+    phone: '+1 936 657 1639', // NOTE: US country code on the Bangladesh office — confirm
+    hours: 'Mon–Sat · 10:00 – 19:00', // PLACEHOLDER hours — replace with the real ones
+    complete: true,
   },
   {
     id: 'us',
@@ -42,7 +53,9 @@ export const offices: Office[] = [
     timeZone: 'America/Chicago',
     role: 'Closest to merchants in our largest market.',
     address: null,
+    email: null,
     phone: null,
+    hours: null,
   },
   {
     id: 'ae',
@@ -55,6 +68,8 @@ export const offices: Office[] = [
     timeZone: 'Asia/Dubai',
     role: 'Partnerships and regional merchant relationships.',
     address: null,
+    email: null,
     phone: null,
+    hours: null,
   },
 ];

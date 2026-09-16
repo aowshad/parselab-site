@@ -84,9 +84,20 @@
   .dark-section {
     @apply bg-ink text-paper;
   }
+  /* Everything a light-surface utility means, restated for ink surfaces.
+     Kept in one place so any component works on either surface untouched. */
   .dark-section .text-ink { color: theme('colors.paper.DEFAULT'); }
-  .dark-section .text-ink-muted { color: #8C8C86; }
+  .dark-section .text-ink-soft { color: #C9C9C4; }
+  .dark-section .text-ink-muted { color: #909089; }
+  .dark-section .text-rule { color: theme('colors.rule.dark'); }
+  .dark-section .bg-rule { background-color: theme('colors.rule.dark'); }
+  .dark-section .fill-ink { fill: theme('colors.paper.DEFAULT'); }
   .dark-section .border-rule { border-color: theme('colors.rule.dark'); }
+  .dark-section .border-y { border-color: theme('colors.rule.dark'); }
+  /* accent-ink is the deepened stop for light surfaces only — on ink it is
+     nearly invisible, so it resolves back to the full-strength accent. */
+  .dark-section .text-accent-ink { color: theme('colors.accent.DEFAULT'); }
+  .dark-section .border-accent\/60 { border-color: theme('colors.accent.DEFAULT'); }
 
   .meta {
     @apply font-mono text-meta text-ink-muted;
