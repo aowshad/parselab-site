@@ -7,6 +7,7 @@ import { WORLD, project } from '@/content/world';
 import LocalTime from './LocalTime';
 import Placeholder from './Placeholder';
 import { dur, ease } from '@/lib/motion';
+import useMediaQuery from '@/lib/useMediaQuery';
 
 const W = 1000;
 const H = WORLD.height;
@@ -43,6 +44,13 @@ export default function GlobalPresence() {
   useEffect(() => setDrawn(true), []);
   const reduced = useReducedMotion();
   const office = offices.find((o) => o.id === active)!;
+  const wide = useMediaQuery('(min-width: 768px)');
+
+  /* Full world on desktop. On phones the whole globe at 320px leaves the three
+     offices as a smudge, so we crop to the band that contains them. */
+  const view = wide
+    ? { x: 0, y: 0, w: W, h: H }
+    : { x: 175, y: 55, w: 640, h: 270 };
 
   const points = useMemo(
     () => Object.fromEntries(offices.map((o) => [o.id, project(o.lat, o.lng)])),
@@ -59,8 +67,12 @@ export default function GlobalPresence() {
     <div className="grid-12 gap-y-12">
       {/* ── Map ─────────────────────────────────────────────── */}
       <div className="col-span-4 md:col-span-7">
-        <div className="relative w-full" style={{ aspectRatio: `${W} / ${H}` }}>
-          <svg viewBox={`0 0 ${W} ${H}`} className="absolute inset-0 h-full w-full" aria-hidden>
+        <div className="relative w-full" style={{ aspectRatio: `${view.w} / ${view.h}` }}>
+          <svg
+            viewBox={`${view.x} ${view.y} ${view.w} ${view.h}`}
+            className="absolute inset-0 h-full w-full"
+            aria-hidden
+          >
             <path
               d={basePath}
               className="fill-ink/[0.16]"
@@ -100,7 +112,11 @@ export default function GlobalPresence() {
                 onClick={() => setActive(o.id)}
                 aria-pressed={on}
                 className="group absolute flex h-12 w-12 -translate-x-1/2 -translate-y-full items-end justify-center"
-                style={{ left: `${(p.x / W) * 100}%`, top: `${(p.y / H) * 100}%`, zIndex: on ? 2 : 1 }}
+                style={{
+                  left: `${((p.x - view.x) / view.w) * 100}%`,
+                  top: `${((p.y - view.y) / view.h) * 100}%`,
+                  zIndex: on ? 2 : 1,
+                }}
               >
                 <span className="sr-only">
                   {o.country} office{o.approximate ? ' (approximate location)' : ''}
@@ -109,7 +125,7 @@ export default function GlobalPresence() {
                 {/* Label lives outside the pin, and only when it is wanted. */}
                 <span
                   aria-hidden
-                  className={`pointer-events-none absolute bottom-full left-1/2 mb-2.5 -translate-x-1/2 transition-all duration-base ease-out ${
+                  className={`pointer-events-none absolute bottom-full left-1/2 mb-1.5 -translate-x-1/2 transition-all duration-base ease-out ${
                     on
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100'
@@ -131,7 +147,7 @@ export default function GlobalPresence() {
                 >
                   <svg
                     viewBox="0 0 24 30"
-                    className={`h-11 w-auto ${on ? 'text-accent' : 'text-ink-ash'}`}
+                    className={`h-8 w-auto md:h-11 ${on ? 'text-accent' : 'text-ink-ash'}`}
                   >
                     <path
                       d="M12 0C5.373 0 0 5.373 0 12c0 8.4 12 18 12 18s12-9.6 12-18c0-6.627-5.373-12-12-12z"
@@ -154,28 +170,37 @@ export default function GlobalPresence() {
 
       {/* ── Panel ───────────────────────────────────────────── */}
       <div className="col-span-4 md:col-span-4 md:col-start-9">
-        <div role="group" aria-label="Offices" className="flex flex-wrap gap-x-6 gap-y-2 border-b border-rule pb-4">
-          {offices.map((o) => (
-            <button
-              key={o.id}
-              type="button"
-              onClick={() => setActive(o.id)}
-              aria-pressed={o.id === active}
-              className={`relative py-1 text-[1.05rem] wdth-narrow transition-colors duration-fast ${
-                o.id === active ? 'text-ink' : 'text-ink-muted hover:text-ink-soft'
-              }`}
-            >
-              {o.country}
-              {o.id === active && (
-                <motion.span
-                  layoutId="office-underline"
+        {/* Each tab carries its own state marker. No absolutely-positioned
+            indicator — that breaks the moment the row wraps, which is exactly
+            what happened on mobile. The square is the site's own state
+            language, and it stays legible as a selector even when inactive. */}
+        <div
+          role="group"
+          aria-label="Offices"
+          className="flex flex-wrap gap-x-7 gap-y-1 border-b border-rule pb-3"
+        >
+          {offices.map((o) => {
+            const on = o.id === active;
+            return (
+              <button
+                key={o.id}
+                type="button"
+                onClick={() => setActive(o.id)}
+                aria-pressed={on}
+                className={`group inline-flex min-h-[44px] items-center gap-2.5 text-[1.125rem] wdth-narrow transition-colors duration-fast ${
+                  on ? 'text-ink' : 'text-ink-muted hover:text-ink-soft'
+                }`}
+              >
+                <span
                   aria-hidden
-                  className="absolute -bottom-[17px] left-0 right-0 h-[2px] bg-accent"
-                  transition={{ duration: dur.base, ease: ease.out }}
+                  className={`block h-2 w-2 shrink-0 transition-colors duration-fast ${
+                    on ? 'bg-accent' : 'bg-rule group-hover:bg-ink-muted'
+                  }`}
                 />
-              )}
-            </button>
-          ))}
+                {o.country}
+              </button>
+            );
+          })}
         </div>
 
         <AnimatePresence mode="wait">
