@@ -1,0 +1,125 @@
+@property --x {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 62%;
+}
+@property --y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 38%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --gutter: 1.25rem;
+    --nav-h: 64px;
+    /* Exact logo ash, from the supplied light file. */
+    --logo-neutral: #696969;
+  }
+  @media (min-width: 768px) {
+    :root { --gutter: 2.5rem; }
+  }
+  @media (min-width: 1280px) {
+    :root { --gutter: 4rem; --nav-h: 76px; }
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink font-sans text-body antialiased;
+    font-synthesis-weight: none;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: theme('colors.accent.DEFAULT');
+    color: theme('colors.ink.DEFAULT');
+  }
+
+  /* Visible, non-negotiable focus. Never removed for aesthetics. */
+  /* Orange at full saturation fails 3:1 against paper, so light surfaces
+     get the deepened stop. Dark surfaces take the bright one. */
+  :focus-visible {
+    outline: 2px solid theme('colors.accent.ink');
+    outline-offset: 3px;
+  }
+  .dark-section :focus-visible {
+    outline-color: theme('colors.accent.DEFAULT');
+  }
+
+  h1, h2, h3, h4 { text-wrap: balance; }
+  p { text-wrap: pretty; }
+}
+
+@layer components {
+  /* The page shell. Every full-width section uses this for its inner content. */
+  .shell {
+    @apply mx-auto w-full max-w-shell;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .grid-12 {
+    @apply grid grid-cols-4 md:grid-cols-12;
+    column-gap: clamp(0.75rem, 1.6vw, 1.75rem);
+  }
+
+  /* Hairline rules carry the grid instead of visible boxes. */
+  .rule-top { @apply border-t border-rule; }
+  .dark-section .rule-top { @apply border-rule-dark; }
+
+  .dark-section,
+  .on-dark {
+    --logo-neutral: #CCCCCC; /* the ash value from the supplied dark file */
+  }
+
+  .dark-section {
+    @apply bg-ink text-paper;
+  }
+  .dark-section .text-ink { color: theme('colors.paper.DEFAULT'); }
+  .dark-section .text-ink-muted { color: #8C8C86; }
+  .dark-section .border-rule { border-color: theme('colors.rule.dark'); }
+
+  .meta {
+    @apply font-mono text-meta text-ink-muted;
+    font-feature-settings: 'tnum' 1;
+  }
+
+  /* Width-axis treatments — Archivo is a variable font (wdth 62–125). */
+  .wdth-tight { font-stretch: 84%; }
+  .wdth-narrow { font-stretch: 92%; }
+  .wdth-wide { font-stretch: 112%; }
+}
+
+@layer utilities {
+  .tnum { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1; }
+
+  /* Clip-path reveal primitive — the site's one signature move. */
+  .wipe-hidden { clip-path: inset(0 100% 0 0); }
+  .wipe-shown { clip-path: inset(0 0 0 0); }
+}
+
+/* ---------------------------------------------------------------
+   Reduced motion: strip parallax, transforms and loops.
+   State transitions and focus feedback are preserved.
+---------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .wipe-hidden { clip-path: none; }
+}
