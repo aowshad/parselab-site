@@ -7,7 +7,7 @@ type Props = {
 
 export default function SectionLabel({ children, index, className = '' }: Props) {
   return (
-    <p className={`meta flex items-baseline gap-3 ${className}`}>
+    <p className={`font-mono text-label text-ink-muted flex items-baseline gap-3 ${className}`}>
       {index && <span className="tnum text-accent">{index}</span>}
       <span>{children}</span>
     </p>

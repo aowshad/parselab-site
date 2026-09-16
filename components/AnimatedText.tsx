@@ -37,7 +37,7 @@ export default function AnimatedText({ lines, className = '', as = 'h2', onMount
       {...(onMount ? { animate: 'show' } : { whileInView: 'show', viewport: viewportOnce })}
     >
       {lines.map((line, i) => (
-        <span key={i} className="block overflow-hidden">
+        <span key={i} className="block overflow-hidden py-[0.16em] -my-[0.16em]">
           <motion.span className="block" variants={riseLine} custom={i + lead / 0.065}>
             {line}
           </motion.span>

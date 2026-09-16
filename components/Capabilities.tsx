@@ -57,12 +57,12 @@ export default function Capabilities() {
             exit={reduced ? undefined : { opacity: 0, y: -8 }}
             transition={{ duration: dur.fast, ease: ease.out }}
           >
-            <CapabilityFigure id={capabilities[active].id} className="mb-8 border border-rule" />
+            <CapabilityFigure id={capabilities[active].id} className="mb-8 border border-dashed border-rule" />
             <p className="max-w-measure-wide text-lead text-ink-soft">{capabilities[active].body}</p>
-            <ul className="mt-8 space-y-2">
+            <ul className="mt-8 flex flex-col gap-3">
               {capabilities[active].detail.map((d) => (
-                <li key={d} className="meta flex items-center gap-3 border-t border-rule pt-2">
-                  <span aria-hidden className="block h-px w-4 bg-accent" />
+                <li key={d} className="flex items-center gap-3.5 text-[1.0625rem] text-ink-soft">
+                  <span aria-hidden className="block h-px w-[18px] shrink-0 bg-accent" />
                   {d}
                 </li>
               ))}

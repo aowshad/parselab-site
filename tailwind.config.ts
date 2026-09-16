@@ -12,8 +12,8 @@ const config: Config = {
       colors: {
         ink: {
           DEFAULT: '#141414',
-          soft: '#3A3A38',
-          muted: '#5E5E5A',
+          soft: '#33332F',   // paragraph text — was #3A3A38, too low against headings
+          muted: '#5E5E5A',  // was #7A7A76, which failed AA at small sizes
           ash: '#696969', // the logo's neutral — used solid, never as an alpha
         },
         paper: {
@@ -42,18 +42,24 @@ const config: Config = {
       },
       fontSize: {
         // Editorial scale. Display sizes tighten tracking as they grow.
-        hero: ['clamp(3.25rem, 9.2vw, 9.5rem)', { lineHeight: '0.88', letterSpacing: '-0.035em' }],
-        display: ['clamp(2.5rem, 6.2vw, 5.5rem)', { lineHeight: '0.94', letterSpacing: '-0.028em' }],
-        title: ['clamp(1.75rem, 3.2vw, 3rem)', { lineHeight: '1.02', letterSpacing: '-0.02em' }],
-        lead: ['clamp(1.125rem, 1.5vw, 1.375rem)', { lineHeight: '1.45', letterSpacing: '-0.011em' }],
-        body: ['1.0625rem', { lineHeight: '1.6' }],
-        nav: '1rem',
-        meta: ['0.875rem', { lineHeight: '1.3', letterSpacing: '0.01em' }],
+        /* Line heights below 1.0 make consecutive line boxes physically
+           overlap — fine until a descender meets an ascender. These sit just
+           above 1.0 so the type still reads tight without colliding. */
+        hero: ['clamp(3.25rem, 9.2vw, 9.5rem)', { lineHeight: '0.95', letterSpacing: '-0.035em' }],
+        display: ['clamp(2.5rem, 6.2vw, 5.5rem)', { lineHeight: '1.02', letterSpacing: '-0.028em' }],
+        title: ['clamp(1.75rem, 3.2vw, 3rem)', { lineHeight: '1.12', letterSpacing: '-0.02em' }],
+        lead: ['clamp(1.1875rem, 1.5vw, 1.375rem)', { lineHeight: '1.55', letterSpacing: '-0.011em' }],
+        body: ['1.125rem', { lineHeight: '1.65' }],
+        /** Section labels — these introduce a section, so they are not footnotes. */
+        label: ['0.9375rem', { lineHeight: '1.3', letterSpacing: '0.01em' }],
+        meta: ['0.875rem', { lineHeight: '1.35', letterSpacing: '0.01em' }],
       },
       maxWidth: {
         shell: '96rem',
-        measure: '34rem',
-        'measure-wide': '46rem',
+        /* Reading measure. 46rem at the old body size ran to ~80 characters;
+           comfortable reading tops out around 75. */
+        measure: '30rem',
+        'measure-wide': '36rem',
       },
       spacing: {
         gutter: 'var(--gutter)',

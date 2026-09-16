@@ -46,8 +46,9 @@ export default function MobileMenu({
               {nav.map((item, i) => {
                 const active = pathname === item.href;
                 return (
-                  <li key={item.href} className="overflow-hidden border-b border-rule-dark">
+                  <li key={item.href} className="border-b border-rule-dark">
                     <motion.div
+                      className="overflow-hidden py-[0.16em] -my-[0.16em]"
                       initial={reduced ? false : { y: '110%' }}
                       animate={{ y: '0%' }}
                       transition={{ duration: dur.slow, ease: ease.out, delay: 0.1 + i * 0.07 }}

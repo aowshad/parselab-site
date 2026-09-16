@@ -118,7 +118,7 @@ export default function VariableHeadline({
   return (
     <h1 ref={root} className={className}>
       {lines.map((line, i) => (
-        <span key={i} className="block overflow-hidden">
+        <span key={i} className="block overflow-hidden py-[0.16em] -my-[0.16em]">
           <motion.span
             className="block"
             variants={riseLine}
