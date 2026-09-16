@@ -297,7 +297,7 @@ export default function LivingSystem() {
       {label && (
         <span
           key={label.key}
-          className="pl-sys-label pointer-events-none absolute whitespace-nowrap font-mono text-micro text-accent-ink"
+          className="pl-sys-label pointer-events-none absolute whitespace-nowrap font-mono text-meta text-accent-ink"
           style={{ left: label.x + 14, top: label.y - 7 }}
         >
           {label.text}

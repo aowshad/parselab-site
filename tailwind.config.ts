@@ -13,7 +13,7 @@ const config: Config = {
         ink: {
           DEFAULT: '#141414',
           soft: '#3A3A38',
-          muted: '#7A7A76',
+          muted: '#5E5E5A',
           ash: '#696969', // the logo's neutral — used solid, never as an alpha
         },
         paper: {
@@ -47,8 +47,8 @@ const config: Config = {
         title: ['clamp(1.75rem, 3.2vw, 3rem)', { lineHeight: '1.02', letterSpacing: '-0.02em' }],
         lead: ['clamp(1.125rem, 1.5vw, 1.375rem)', { lineHeight: '1.45', letterSpacing: '-0.011em' }],
         body: ['1.0625rem', { lineHeight: '1.6' }],
-        meta: ['0.75rem', { lineHeight: '1.3', letterSpacing: '0.01em' }],
-        micro: ['0.6875rem', { lineHeight: '1.2', letterSpacing: '0.02em' }],
+        nav: '1rem',
+        meta: ['0.875rem', { lineHeight: '1.3', letterSpacing: '0.01em' }],
       },
       maxWidth: {
         shell: '96rem',

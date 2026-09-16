@@ -104,7 +104,7 @@ export default function TeamExplorer() {
                   </p>
                   <p className="meta mt-1">{p.needsContent ? 'role' : p.role}</p>
                   {p.note && (
-                    <p className="mt-3 max-h-0 max-w-measure overflow-hidden text-[0.95rem] text-ink-soft opacity-0 transition-all duration-base ease-out group-hover:max-h-24 group-hover:opacity-100 group-focus-within:max-h-24 group-focus-within:opacity-100">
+                    <p className="mt-3 max-h-0 max-w-measure overflow-hidden text-nav text-ink-soft opacity-0 transition-all duration-base ease-out group-hover:max-h-24 group-hover:opacity-100 group-focus-within:max-h-24 group-focus-within:opacity-100">
                       {p.note}
                     </p>
                   )}

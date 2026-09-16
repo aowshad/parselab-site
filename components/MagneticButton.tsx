@@ -30,7 +30,7 @@ export default function MagneticButton({ href, children, variant = 'solid', clas
   };
 
   const base =
-    'group relative inline-flex min-h-[48px] items-center gap-3 px-6 text-[0.95rem] wdth-narrow transition-colors duration-fast ease-out';
+    'group relative inline-flex min-h-[48px] items-center gap-3 px-6 text-nav wdth-narrow transition-colors duration-fast ease-out';
   const look =
     variant === 'solid'
       ? 'bg-ink text-paper hover:bg-accent'

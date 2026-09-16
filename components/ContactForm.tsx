@@ -122,7 +122,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={sending}
-        className="group mt-10 inline-flex min-h-[48px] items-center gap-3 bg-ink px-6 text-[0.95rem] wdth-narrow text-paper transition-colors duration-fast hover:bg-accent disabled:opacity-60"
+        className="group mt-10 inline-flex min-h-[48px] items-center gap-3 bg-ink px-6 text-nav wdth-narrow text-paper transition-colors duration-fast hover:bg-accent disabled:opacity-60"
       >
         {sending ? 'Sending' : 'Send message'}
         <span aria-hidden className="transition-transform duration-fast group-hover:translate-x-1">→</span>

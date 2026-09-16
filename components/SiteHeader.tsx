@@ -54,7 +54,7 @@ export default function SiteHeader() {
                     <Link
                       href={item.href}
                       aria-current={active ? 'page' : undefined}
-                      className="group relative inline-block py-2 text-[0.9rem] wdth-narrow text-ink"
+                      className="group relative inline-block py-2 text-nav wdth-narrow text-ink"
                     >
                       {item.label}
                       <span
@@ -70,7 +70,7 @@ export default function SiteHeader() {
               <li>
                 <Link
                   href="/#contact"
-                  className="inline-flex min-h-[40px] items-center border border-rule px-4 text-[0.9rem] wdth-narrow transition-colors duration-fast hover:border-accent hover:text-accent-ink"
+                  className="inline-flex min-h-[40px] items-center border border-rule px-4 text-nav wdth-narrow transition-colors duration-fast hover:border-accent hover:text-accent-ink"
                 >
                   Contact
                 </Link>

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { capabilities } from '@/content/capabilities';
+import CapabilityFigure from './CapabilityFigure';
 import { dur, ease } from '@/lib/motion';
 
 /**
@@ -56,6 +57,7 @@ export default function Capabilities() {
             exit={reduced ? undefined : { opacity: 0, y: -8 }}
             transition={{ duration: dur.fast, ease: ease.out }}
           >
+            <CapabilityFigure id={capabilities[active].id} className="mb-8 border border-rule" />
             <p className="max-w-measure-wide text-lead text-ink-soft">{capabilities[active].body}</p>
             <ul className="mt-8 space-y-2">
               {capabilities[active].detail.map((d) => (

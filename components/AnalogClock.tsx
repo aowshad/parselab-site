@@ -83,7 +83,7 @@ export default function AnalogClock({
       </svg>
 
       <div className="min-w-0">
-        <p className="wdth-narrow text-[0.95rem] leading-none text-paper">{code}</p>
+        <p className="wdth-narrow text-nav leading-none text-paper">{code}</p>
         <p className="meta tnum mt-1.5 leading-none">{t?.text ?? '--:--'}</p>
       </div>
     </div>

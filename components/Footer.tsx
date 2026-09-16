@@ -26,7 +26,7 @@ export default function Footer() {
               <ul className="space-y-2">
                 {group.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href} className="text-[0.95rem] text-paper/80 transition-colors hover:text-accent">
+                    <Link href={l.href} className="text-nav text-paper/80 transition-colors hover:text-accent">
                       {l.label}
                     </Link>
                   </li>
@@ -40,7 +40,7 @@ export default function Footer() {
             <ul className="space-y-2">
               {social.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} className="text-[0.95rem] text-paper/80 transition-colors hover:text-accent">
+                  <a href={s.href} className="text-nav text-paper/80 transition-colors hover:text-accent">
                     {s.label}
                   </a>
                 </li>

@@ -31,6 +31,7 @@ export const products: Product[] = [
       { k: 'Surface', v: 'Storefront + admin' },
       { k: 'Also known as', v: 'ProductsDesigner' },
     ],
+    visual: '/products/inkybay-visual.webp',
   },
   {
     id: 'optionia',
@@ -45,6 +46,7 @@ export const products: Product[] = [
       { k: 'Surface', v: 'Storefront + admin' },
       { k: 'Track', v: 'Built for Shopify' },
     ],
+    visual: '/products/optionia-visual.webp',
   },
   {
     id: 'productsmodel',
