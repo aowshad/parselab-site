@@ -109,7 +109,7 @@ export default function GlobalPresence() {
                 {/* Label lives outside the pin, and only when it is wanted. */}
                 <span
                   aria-hidden
-                  className={`pointer-events-none absolute bottom-full left-1/2 mb-1.5 -translate-x-1/2 transition-all duration-base ease-out ${
+                  className={`pointer-events-none absolute bottom-full left-1/2 mb-2.5 -translate-x-1/2 transition-all duration-base ease-out ${
                     on
                       ? 'translate-y-0 opacity-100'
                       : 'translate-y-1 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100'
