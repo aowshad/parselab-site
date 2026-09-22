@@ -20,6 +20,8 @@ type Props = {
   className?: string;
   /** Scale image slightly on hover of a parent marked .group */
   interactive?: boolean;
+  /** Hover scale factor when interactive. Defaults to the scale used everywhere else. */
+  hoverScale?: 1.02 | 1.03;
 };
 
 export default function ImageFrame({
@@ -33,6 +35,7 @@ export default function ImageFrame({
   sizes = '(max-width: 768px) 100vw, 40vw',
   className = '',
   interactive = false,
+  hoverScale = 1.03,
 }: Props) {
   const reduced = useReducedMotion();
 
@@ -54,7 +57,7 @@ export default function ImageFrame({
             sizes={sizes}
             priority={priority}
             className={`object-cover transition-transform duration-slow ease-out ${
-              interactive ? 'group-hover:scale-[1.03]' : ''
+              interactive ? (hoverScale === 1.02 ? 'group-hover:scale-[1.02]' : 'group-hover:scale-[1.03]') : ''
             }`}
           />
         ) : (

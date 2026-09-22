@@ -144,18 +144,16 @@ export default function HomePage() {
       {/* 09 — Selected people */}
       <section className="shell pt-section">
         <div className="grid-12 gap-y-8 border-t border-rule pt-10">
-          <SectionLabel className="col-span-4 md:col-span-3">Some of us</SectionLabel>
+          <SectionLabel className="col-span-4 md:col-span-3">The studio</SectionLabel>
           <div className="col-span-4 md:col-span-9">
-            <AnimatedText
-              lines={['Software gets better when', 'the people building it', 'read the support inbox.']}
-              className="wdth-tight text-display"
-            />
+            <AnimatedText lines={['Meet the artisans']} className="wdth-tight text-display" />
           </div>
         </div>
         <div className="mt-14 md:mt-20">
           <PeopleStrip />
         </div>
-        <div className="mt-12 flex justify-end">
+        <div className="mt-8 flex items-baseline justify-between gap-4">
+          <p className="meta">Design, engineering, content, marketing, operations — one release cycle.</p>
           <ArrowLink href="/teams">Meet everyone</ArrowLink>
         </div>
       </section>

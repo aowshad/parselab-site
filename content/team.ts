@@ -21,13 +21,11 @@ export type Person = {
   needsContent?: boolean;
 };
 
-/**
- * These seven names came from the brief and have NOT been verified against
- * the current org chart. Confirm or rename, then set this flag to false.
- */
-export const departmentsNeedConfirmation = true;
+/** Real titles, confirmed against the org chart. */
+export const departmentsNeedConfirmation = false;
 
 export const disciplines: Discipline[] = [
+  { id: 'leadership', name: 'Leadership', blurb: 'Sets direction for the studio and answers for what it ships.', count: null },
   { id: 'interface', name: 'Creative Interface', blurb: 'Product and interface design across every surface a merchant or shopper touches.', count: null },
   { id: 'experience', name: 'Technical Experience', blurb: 'The bridge between design intent and what the storefront can actually render.', count: null },
   { id: 'content', name: 'Content Artisan', blurb: 'Product writing, documentation and the words inside the apps.', count: null },
@@ -37,28 +35,24 @@ export const disciplines: Discipline[] = [
   { id: 'marketing', name: 'Marketing Engagement', blurb: 'How merchants find the apps, and what they understand before installing.', count: null },
 ];
 
-const DEPTS = disciplines.map((d) => d.id);
-const SCALES: Array<'lg' | 'md' | 'sm'> = ['md', 'sm', 'lg', 'sm', 'md', 'sm', 'lg', 'md'];
-
-/* One verified person. 24 structured empties to reach the confirmed 25+.
-   Paste real names, roles and portraits over these and delete the rest. */
+/* The full studio — 17 confirmed people. Portraits arrive later; scale is
+   set deliberately per person so the Teams grid stays editorial. */
 export const people: Person[] = [
-  {
-    id: 'aowshad',
-    name: 'Al Aowshad Himel',
-    role: 'Product Designer',
-    discipline: 'interface',
-    note: 'Works across product design, UX and frontend prototyping.',
-    scale: 'lg',
-    featured: true,
-  },
-  ...Array.from({ length: 24 }, (_, i) => ({
-    id: `person-${i + 2}`,
-    name: '[ADD NAME]',
-    role: '[Role]',
-    discipline: DEPTS[(i + 1) % DEPTS.length],
-    scale: SCALES[i % SCALES.length],
-    featured: i < 4,
-    needsContent: true,
-  })),
+  { id: 'pran-krishna-paul', name: 'Pran Krishna Paul', role: 'Founder & CEO', discipline: 'leadership', scale: 'lg' },
+  { id: 'al-aowshad-himel', name: 'Al Aowshad Himel', role: 'Product Designer', discipline: 'interface', scale: 'lg' },
+  { id: 'md-habibur-rahman', name: 'Md. Habibur Rahman', role: 'Lead, Technical Experience', discipline: 'experience', scale: 'md' },
+  { id: 'abdul-ohab', name: 'Abdul Ohab', role: 'Senior Technology Development Engineer', discipline: 'development', scale: 'sm' },
+  { id: 'novel-chakma', name: 'Novel Chakma', role: 'Technical Experience Engineer', discipline: 'experience', scale: 'md' },
+  { id: 'shuvo-banerjee', name: 'Shuvo Banerjee', role: 'Digital Marketing Executive', discipline: 'marketing', scale: 'sm' },
+  { id: 'nowshin-afroj-anha', name: 'Nowshin Afroj Anha', role: 'Writer, Content Artisan', discipline: 'content', scale: 'md' },
+  { id: 'shazzad-hossain', name: 'Shazzad Hossain', role: 'Associate, Technology Development Engineer', discipline: 'development', scale: 'sm' },
+  { id: 'shawon-bala-nath', name: 'Shawon Bala Nath', role: 'Writer, Content Artisan', discipline: 'content', scale: 'sm' },
+  { id: 'rafiqul-islam-sakib', name: 'Rafiqul Islam Sakib', role: 'Technical Experience Engineer', discipline: 'experience', scale: 'md' },
+  { id: 'nabila-akter', name: 'Nabila Akter', role: 'Associate, Technical Experience Engineer', discipline: 'experience', scale: 'sm' },
+  { id: 'ami-hasan', name: 'Ami Hasan', role: 'Technology Development Engineer', discipline: 'development', scale: 'md' },
+  { id: 'md-al-ashikul-bari-apon', name: 'MD Al Ashikul Bari Apon', role: 'Technical Experience Engineer', discipline: 'experience', scale: 'sm' },
+  { id: 'maisha-musarrat-nabila', name: 'Maisha Musarrat Nabila', role: 'Associate, Technical Experience Engineer', discipline: 'experience', scale: 'sm' },
+  { id: 'partha-pratim-paul', name: 'Partha Pratim Paul', role: 'Executive, Human Resource & Admin', discipline: 'facility', scale: 'md' },
+  { id: 'swapan-paul', name: 'Swapan Paul', role: 'Facilities Coordinator', discipline: 'facility', scale: 'sm' },
+  { id: 'md-ali-al-alvy', name: 'Md. Ali - Al - Alvy', role: 'Designer, Social Media', discipline: 'marketing', scale: 'md' },
 ];
