@@ -5,9 +5,8 @@ export type Entry = {
   date: string;
   readingTime: string;
   href: string;
-  /** One line shown on the insights index. */
-  standfirst?: string;
-  featured?: boolean;
+  /** /public/<path> — 3:2, 1600×1066 recommended. */
+  thumbnail?: string;
   draft?: boolean;
   needsContent?: boolean;
 };
@@ -25,9 +24,6 @@ export const journal: Entry[] = [
     date: '[Date]',
     readingTime: '[—] min',
     href: '/insights',
-    standfirst:
-      'Fonts, z-index, touch events and a checkout button you do not own. Notes from keeping InkyBay stable across thousands of Shopify themes.',
-    featured: true,
     draft: true,
   },
   {
@@ -37,8 +33,6 @@ export const journal: Entry[] = [
     date: '[Date]',
     readingTime: '[—] min',
     href: '/insights',
-    standfirst:
-      'Why we built Optionia around the limit instead of against it, and what happens to a catalogue when you stop pretending every combination is a product.',
     draft: true,
   },
   {
@@ -48,8 +42,6 @@ export const journal: Entry[] = [
     date: '[Date]',
     readingTime: '[—] min',
     href: '/insights',
-    standfirst:
-      'How we turn a year of merchant conversations into a shortlist of things to change — and why the loudest complaint is rarely the most useful one.',
     draft: true,
   },
 ];
