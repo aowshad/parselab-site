@@ -38,7 +38,7 @@ const config: Config = {
       },
       fontFamily: {
         sans: ['var(--font-archivo)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        mono: ['var(--font-plex-mono)', 'ui-monospace', 'SFMono-Regular', 'monospace'],
+        text: ['var(--font-dm-sans)', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
       fontSize: {
         // Editorial scale. Display sizes tighten tracking as they grow.

@@ -71,8 +71,8 @@ export default function ImageFrame({
             aria-label={`Image placeholder: ${slot}`}
             data-content-needed
           >
-            <span className="font-mono text-meta text-accent-ink">{slot}</span>
-            <span className="font-mono text-meta text-ink-muted">
+            <span className="font-text text-meta text-accent-ink">{slot}</span>
+            <span className="meta">
               {hint ?? `image · ${ratio.replace(/\s/g, '')}`}
             </span>
           </div>

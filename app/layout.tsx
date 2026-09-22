@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Archivo, IBM_Plex_Mono } from 'next/font/google';
+import { Archivo, DM_Sans } from 'next/font/google';
 import './globals.css';
 import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
@@ -14,10 +14,9 @@ const archivo = Archivo({
   display: 'swap',
 });
 
-const plexMono = IBM_Plex_Mono({
+const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-plex-mono',
+  variable: '--font-dm-sans',
   display: 'swap',
 });
 
@@ -42,7 +41,7 @@ export const viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${archivo.variable} ${plexMono.variable}`}>
+    <html lang="en" className={`${archivo.variable} ${dmSans.variable}`}>
       <body>
         <SiteHeader />
         <main id="main">{children}</main>

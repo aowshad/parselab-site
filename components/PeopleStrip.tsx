@@ -37,7 +37,7 @@ function Card({ hidden = false }: { hidden?: boolean }) {
               />
               <div>
                 <p className="text-[1.0625rem] wdth-narrow leading-tight">{p.name}</p>
-                <p className="mt-1 font-mono text-[0.8125rem] text-ink-muted">{p.role}</p>
+                <p className="mt-1 font-text text-[0.8125rem] text-ink-muted">{p.role}</p>
               </div>
             </div>
           </Link>

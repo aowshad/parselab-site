@@ -43,7 +43,7 @@ export default function BrandField() {
                 />
               ) : (
                 <span
-                  className="font-mono text-meta text-ink-muted transition-colors duration-fast group-hover:text-accent-ink"
+                  className="font-text text-meta text-ink-muted transition-colors duration-fast group-hover:text-accent-ink"
                   data-content-needed
                 >
                   {b.name}

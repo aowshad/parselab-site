@@ -100,8 +100,10 @@
   .dark-section .border-accent\/60 { border-color: theme('colors.accent.DEFAULT'); }
 
   .meta {
-    @apply font-mono text-meta text-ink-muted;
+    @apply text-meta text-ink-muted;
+    font-family: theme('fontFamily.text');
     font-feature-settings: 'tnum' 1;
+    letter-spacing: 0.02em;
   }
 
   /* Width-axis treatments — Archivo is a variable font (wdth 62–125). */
@@ -111,7 +113,15 @@
 }
 
 @layer utilities {
-  .tnum { font-variant-numeric: tabular-nums; font-feature-settings: 'tnum' 1; }
+  /* DM Sans ships no tabular-figure glyphs at all — digits still render at
+     their proportional widths under tabular-nums. Archivo does support the
+     feature, so numeric contexts (clocks, counters, coordinates, the
+     timeline) render their digits in it regardless of the ambient font. */
+  .tnum {
+    font-family: theme('fontFamily.sans');
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: 'tnum' 1;
+  }
 
   /* Clip-path reveal primitive — the site's one signature move. */
   .wipe-hidden { clip-path: inset(0 100% 0 0); }
