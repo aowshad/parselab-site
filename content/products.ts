@@ -5,7 +5,7 @@ export type Product = {
   line: string;
   body: string;
   platform: string;
-  status: 'Live' | 'In review' | 'In build';
+  status: 'Live' | 'In review' | 'In build' | '—';
   facts: { k: string; v: string }[];
   /** /public/products/<id>-mark.svg — a wordmark or app icon. */
   logo?: string;
@@ -15,8 +15,9 @@ export type Product = {
   needsContent?: boolean;
 };
 
-/* 5+ products confirmed. Two are named and verified; the rest are
-   editable slots. Nothing here is invented. */
+/* Four products. InkyBay and Optionia are verified; JewelsLab and Quotend
+   carry only their name (and JewelsLab’s tagline from its logo) until the
+   details are supplied. Nothing here is invented. */
 export const products: Product[] = [
   {
     id: 'inkybay',
@@ -24,7 +25,7 @@ export const products: Product[] = [
     category: 'Product customisation',
     line: 'Product customiser for print-on-demand and made-to-order stores.',
     body:
-      'Shoppers design the thing they are buying — text, artwork, colours, placement — and the store receives a print-ready file with the order. Built for merchants whose catalogue is really one product and a very large number of decisions.',
+      'Shoppers design what they buy: text, artwork, colours and placement. The store gets a print-ready file with the order. Built for stores that sell one product with many choices.',
     platform: 'Shopify',
     status: 'Live',
     facts: [
@@ -37,9 +38,9 @@ export const products: Product[] = [
     id: 'optionia',
     name: 'Optionia',
     category: 'Product options',
-    line: 'Product options and conditional logic beyond Shopify’s variant limits.',
+    line: 'Product options beyond Shopify’s variant limits.',
     body:
-      'Adds option sets, conditional fields and per-option pricing to products that do not fit a variant matrix. Currently going through App Store review and Built for Shopify compliance.',
+      'Adds option sets, conditional fields and per-option pricing to products that do not fit Shopify variants. Now in App Store review and Built for Shopify checks.',
     platform: 'Shopify',
     status: 'In review',
     facts: [
@@ -49,38 +50,29 @@ export const products: Product[] = [
     visual: '/products/optionia-visual.webp',
   },
   {
-    id: 'productsmodel',
-    name: 'ProductsModel',
-    category: 'Marketplace',
-    line: 'Verified, simulation-ready 3D models of industrial and engineering hardware.',
+    id: 'jewelslab',
+    name: 'JewelsLab',
+    category: 'Custom jewelry personalizer',
+    line: 'Custom jewelry personalizer.',
     body:
-      'CONFIRM BEFORE PUBLISHING: include this entry only if ProductsModel is a ParseLab product. Rewrite this description in the company’s own words, or delete the entry.',
-    platform: 'Web',
-    status: 'In build',
-    facts: [{ k: 'Surface', v: 'Web' }],
+      '[ADD DESCRIPTION: two short sentences on what JewelsLab does.]',
+    platform: '—',
+    status: '—',
+    facts: [{ k: 'Surface', v: '—' }],
+    visual: '/products/jewelslab-visual.webp',
     needsContent: true,
   },
   {
-    id: 'product-4',
-    name: '[ADD PRODUCT]',
+    id: 'quotend',
+    name: 'Quotend',
     category: '—',
-    line: 'Replace with a real product.',
+    line: '[ADD ONE-LINE DESCRIPTION]',
     body:
-      'Empty slot. Paste the product name, category, platform, status and a two-sentence description. The layout re-flows for any number of products.',
+      '[ADD DESCRIPTION: two short sentences on what Quotend does.]',
     platform: '—',
-    status: 'In build',
+    status: '—',
     facts: [{ k: 'Surface', v: '—' }],
-    needsContent: true,
-  },
-  {
-    id: 'product-5',
-    name: '[ADD PRODUCT]',
-    category: '—',
-    line: 'Replace with a real product.',
-    body: 'Empty slot.',
-    platform: '—',
-    status: 'In build',
-    facts: [{ k: 'Surface', v: '—' }],
+    visual: '/products/quotend-visual.webp',
     needsContent: true,
   },
 ];

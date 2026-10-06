@@ -15,8 +15,8 @@ export default function JobList() {
     return (
       <div className="border-y border-rule py-12">
         <p className="max-w-measure-wide text-lead text-ink-soft">
-          No open roles right now. We still read every note — tell us what you build and we will
-          come back to you when something opens.
+          No open roles right now. We still read every message. Tell us what you build and we will
+          contact you when a role opens.
         </p>
         <Link
           href="/contact"

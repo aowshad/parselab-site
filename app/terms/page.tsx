@@ -8,7 +8,7 @@ export default function TermsPage() {
     <LegalPage
       label="Legal"
       lines={['Terms &', 'conditions']}
-      intro="The terms covering use of this site and of ParseLab’s products. Written to be read, not to be survived."
+      intro="The terms for using this site and ParseLab’s products, written in plain language."
       sections={[
         { heading: 'Who these terms are between' },
         { heading: 'Using our apps' },

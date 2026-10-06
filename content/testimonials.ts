@@ -5,7 +5,7 @@ export type Testimonial = {
   role: string;
   org: string;
   product: string;
-  /** Portrait or a photo of their product. */
+  /** Optional portrait or product photo. The card shows no image without one. */
   visual?: string;
   needsContent?: boolean;
 };
@@ -21,7 +21,6 @@ export const testimonials: Testimonial[] = [
     role: 'Product Designer',
     org: 'ParseLab',
     product: 'InkyBay',
-    visual: '/testimonials/al-aowshad-himel.webp',
   },
   { id: 't2', quote: '[ADD TESTIMONIAL]', person: '[Name]', role: '[Role]', org: '[Company]', product: 'Optionia', needsContent: true },
   { id: 't3', quote: '[ADD TESTIMONIAL]', person: '[Name]', role: '[Role]', org: '[Company]', product: 'InkyBay', needsContent: true },

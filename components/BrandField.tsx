@@ -57,7 +57,7 @@ export default function BrandField() {
       <p className="meta mt-5 min-h-[1.5rem]" aria-live="polite">
         {active && !active.needsContent
           ? `${active.name}${active.product ? ` · ${active.product}` : ''}`
-          : 'Twelve slots. Add a customer mark and the product they use.'}
+          : 'Twelve slots. Add each customer’s logo and the product they use.'}
       </p>
     </div>
   );

@@ -19,28 +19,34 @@ export default function Testimonials() {
 
   return (
     <div className="grid-12 gap-y-10">
-      <div className="col-span-4 md:col-span-4">
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={`v-${i}`}
-            initial={reduced ? false : { opacity: 0, scale: 1.02 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={reduced ? undefined : { opacity: 0 }}
-            transition={{ duration: dur.base, ease: ease.out }}
-          >
-            <ImageFrame
-              slot={`customer · ${t.needsContent ? 'unassigned' : t.org}`}
-              src={t.visual}
-              alt={t.needsContent ? '' : `${t.person}, ${t.org}`}
-              ratio="4 / 5"
-              hint="portrait or their product · 1200×1500"
-              sizes="(max-width: 768px) 100vw, 32vw"
-            />
-          </motion.div>
-        </AnimatePresence>
-      </div>
+      {t.visual && (
+        <div className="col-span-4 md:col-span-4">
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`v-${i}`}
+              initial={reduced ? false : { opacity: 0, scale: 1.02 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={reduced ? undefined : { opacity: 0 }}
+              transition={{ duration: dur.base, ease: ease.out }}
+            >
+              <ImageFrame
+                slot={`customer · ${t.needsContent ? 'unassigned' : t.org}`}
+                src={t.visual}
+                alt={t.needsContent ? '' : `${t.person}, ${t.org}`}
+                ratio="4 / 5"
+                hint="portrait or their product · 1200×1500"
+                sizes="(max-width: 768px) 100vw, 32vw"
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      )}
 
-      <div className="col-span-4 flex flex-col justify-between md:col-span-7 md:col-start-6">
+      <div
+        className={`col-span-4 flex flex-col justify-between ${
+          t.visual ? 'md:col-span-7 md:col-start-6' : 'md:col-span-8 md:col-start-4'
+        }`}
+      >
         <AnimatePresence mode="wait">
           <motion.blockquote
             key={`q-${i}`}
@@ -49,7 +55,11 @@ export default function Testimonials() {
             exit={reduced ? undefined : { opacity: 0, y: -8 }}
             transition={{ duration: dur.fast, ease: ease.out }}
           >
-            <p className="wdth-tight text-title">
+            <p
+              className={`wdth-tight ${
+                t.quote.length > 160 ? 'text-[clamp(1.35rem,2.2vw,1.85rem)] leading-[1.35]' : 'text-title'
+              }`}
+            >
               {t.needsContent ? <Placeholder label="testimonial needed" /> : `“${t.quote}”`}
             </p>
             <footer className="mt-8 border-t border-rule pt-4">

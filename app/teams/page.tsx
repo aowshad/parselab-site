@@ -24,8 +24,8 @@ export default function TeamsPage() {
         <AnimatedText as="h1" onMount lines={['People behind', 'the products.']} className="wdth-tight text-hero" />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            Twenty-five people across {disciplines.length} teams and three countries. Nobody here
-            works more than one conversation away from a merchant.
+            Twenty-five people in {disciplines.length} teams and three countries. Everyone is close
+            to our merchants.
           </p>
         </div>
       </section>
@@ -36,9 +36,9 @@ export default function TeamsPage() {
           <SectionLabel className="col-span-4 md:col-span-3">How the teams fit together</SectionLabel>
           <div className="col-span-4 md:col-span-9">
             <p className="max-w-measure-wide text-lead text-ink-soft">
-              We organise around responsibility rather than seniority. A team owns a surface — the
-              admin, the storefront, the inbox, the words — and owns it all the way through, from
-              the argument about what to build to the ticket that arrives afterwards.
+              We organise by responsibility, not seniority. Each team owns one area, such as the
+              admin, storefront, support or writing. They own it from the first idea to the last
+              support ticket.
             </p>
           </div>
         </div>

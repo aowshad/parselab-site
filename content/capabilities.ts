@@ -13,28 +13,28 @@ export const capabilities: Capability[] = [
     id: 'design',
     verb: 'Design',
     body:
-      'Interface and product design for commerce surfaces, where the same screen has to satisfy a merchant configuring it and a shopper trying to finish.',
+      'We design the screens merchants use to set up products, and the screens shoppers use to finish an order.',
     detail: ['Product design', 'Interface systems', 'Prototyping'],
   },
   {
     id: 'build',
     verb: 'Build',
     body:
-      'We ship our own products rather than staffing other people’s roadmaps. Everything on this site is something we own and maintain.',
+      'We build and maintain our own products. Everything on this site is ours.',
     detail: ['SaaS products', 'Shopify apps', 'Commerce tooling'],
   },
   {
     id: 'run',
     verb: 'Run',
     body:
-      'Apps in an app store are a commitment, not a launch. Review compliance, performance, upgrades and the long tail of merchant edge cases.',
+      'Apps need care after launch. We handle app store review, speed, updates and merchant questions.',
     detail: ['App Store review', 'Built for Shopify', 'Performance'],
   },
   {
     id: 'support',
     verb: 'Support',
     body:
-      'The support inbox is a product input. The people answering it sit next to the people who can fix what it describes.',
+      'Our support team sits next to the people who can fix problems. Every message helps us improve the product.',
     detail: ['Merchant support', 'Onboarding', 'Documentation'],
   },
 ];

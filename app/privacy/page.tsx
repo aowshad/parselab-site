@@ -8,7 +8,7 @@ export default function PrivacyPage() {
     <LegalPage
       label="Legal"
       lines={['Privacy', 'policy']}
-      intro="What we collect, why we collect it, and what we do not do with it. Includes the data our apps process on behalf of merchants."
+      intro="What we collect, why we collect it, and what we do not do with it. This includes data our apps handle for merchants."
       sections={[
         { heading: 'What we collect' },
         { heading: 'Data our apps process for merchants' },

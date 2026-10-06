@@ -27,14 +27,14 @@ export type Person = {
 export const departmentsNeedConfirmation = false;
 
 export const disciplines: Discipline[] = [
-  { id: 'leadership', name: 'Leadership', blurb: 'Sets direction for the studio and answers for what it ships.', count: null, image: '/team/leadership.webp' },
-  { id: 'interface', name: 'Creative Interface', blurb: 'Product and interface design across every surface a merchant or shopper touches.', count: null },
-  { id: 'experience', name: 'Technical Experience', blurb: 'The bridge between design intent and what the storefront can actually render.', count: null },
-  { id: 'content', name: 'Content Artisan', blurb: 'Product writing, documentation and the words inside the apps.', count: null },
-  { id: 'development', name: 'Technology Development', blurb: 'Application engineering, rendering pipelines and the systems merchants never see.', count: null },
-  { id: 'facility', name: 'Essential Facility', blurb: 'Keeps the studio running so everyone else can concentrate on the work.', count: null },
-  { id: 'operations', name: 'Operations Intelligence', blurb: 'Support, merchant onboarding and the reporting that tells us what to fix next.', count: null },
-  { id: 'marketing', name: 'Marketing Engagement', blurb: 'How merchants find the apps, and what they understand before installing.', count: null },
+  { id: 'leadership', name: 'Leadership', blurb: 'Sets the direction and is responsible for what we ship.', count: null, image: '/team/leadership.webp' },
+  { id: 'interface', name: 'Creative Interface', blurb: 'Designs every screen that merchants and shoppers use.', count: null },
+  { id: 'experience', name: 'Technical Experience', blurb: 'Turns designs into working storefront experiences.', count: null },
+  { id: 'content', name: 'Content Artisan', blurb: 'Writes the words in our apps, plus help articles and docs.', count: null },
+  { id: 'development', name: 'Technology Development', blurb: 'Builds the apps and the systems behind them.', count: null },
+  { id: 'facility', name: 'Essential Facility', blurb: 'Keeps the studio running so others can focus on their work.', count: null },
+  { id: 'operations', name: 'Operations Intelligence', blurb: 'Handles support, merchant onboarding and reports on what to fix next.', count: null },
+  { id: 'marketing', name: 'Marketing Engagement', blurb: 'Helps merchants find our apps and understand them before installing.', count: null },
 ];
 
 /* The full studio — 17 confirmed people. Portraits arrive later; scale is

@@ -26,8 +26,8 @@ export default function ProductsPage() {
         />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            {products.length} products, all of them ours. We do not build to a client brief and
-            hand it over — we ship, support and keep changing the same software for years.
+            {products.length} products, all ours. We do not build for clients and walk away. We run
+            our software and keep improving it for years.
           </p>
         </div>
       </section>

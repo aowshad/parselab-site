@@ -14,10 +14,10 @@ export const metadata: Metadata = {
 };
 
 const routes = [
-  { label: 'General', body: 'Anything that does not fit the other three.' },
-  { label: 'Sales', body: 'Pricing, plans and questions before installing.' },
+  { label: 'General', body: 'Anything else.' },
+  { label: 'Sales', body: 'Pricing, plans and questions before you install.' },
   { label: 'Partnerships', body: 'Agencies, platforms and integrations.' },
-  { label: 'Careers', body: 'Applications and speculative notes. Both get read.' },
+  { label: 'Careers', body: 'Job applications and general notes. We read both.' },
 ];
 
 export default function ContactPage() {
@@ -28,8 +28,8 @@ export default function ContactPage() {
         <AnimatedText as="h1" onMount lines={['Tell us what', 'you’re trying', 'to sell.']} className="wdth-tight text-hero" />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            A real person reads everything that arrives here. If your question is about a specific
-            product, say which one — it gets to the right team faster.
+            A real person reads every message. If it is about a product, tell us which one so it
+            reaches the right team faster.
           </p>
         </div>
       </section>

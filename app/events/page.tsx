@@ -9,7 +9,7 @@ import { events } from '@/content/events';
 
 export const metadata: Metadata = {
   title: 'Events',
-  description: 'Conferences, community events and the things we run ourselves.',
+  description: 'Conferences, community events and events we run ourselves.',
 };
 
 function EventRow({ slug, name, date, location, kind, needsContent }: (typeof events)[number]) {
@@ -47,8 +47,8 @@ export default function EventsPage() {
         <AnimatedText as="h1" onMount lines={['Out of the', 'office.']} className="wdth-tight text-hero" />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            Conferences we speak at, community events we turn up to, and the things we run
-            ourselves. Photography from each one, not stock images of lanyards.
+            Conferences we speak at, community events we join, and events we run ourselves. All
+            photos are from the events themselves.
           </p>
         </div>
       </section>
@@ -90,7 +90,7 @@ export default function EventsPage() {
           <ul className="border-t border-rule">{upcoming.map((e) => <EventRow key={e.slug} {...e} />)}</ul>
         ) : (
           <p className="border-y border-rule py-10 text-lead text-ink-muted">
-            Nothing scheduled at the moment. Past events are below.
+            No upcoming events. Past events are below.
           </p>
         )}
       </section>

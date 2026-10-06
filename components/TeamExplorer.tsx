@@ -65,7 +65,7 @@ export default function TeamExplorer() {
             className="grid-12 gap-y-4"
           >
             <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-7">
-              {current ? current.blurb : 'Everyone in the studio, across every discipline.'}
+              {current ? current.blurb : 'Everyone in the studio.'}
             </p>
             <p className="meta tnum col-span-4 self-end md:col-span-2 md:col-start-11 md:text-right">
               {shown.length} {shown.length === 1 ? 'person' : 'people'}

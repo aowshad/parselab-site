@@ -16,8 +16,7 @@ export default function InsightsPage() {
         <AnimatedText as="h1" onMount lines={['Notes from', 'building.']} className="wdth-tight text-hero" />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            Product decisions, engineering write-ups and the occasional post-mortem. Mostly written
-            after something broke.
+            Product decisions, engineering notes and the occasional post-mortem.
           </p>
         </div>
       </section>

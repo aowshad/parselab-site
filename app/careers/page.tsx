@@ -27,8 +27,8 @@ export default function CareersPage() {
         />
         <div className="mt-12 grid-12">
           <p className="col-span-4 max-w-measure-wide text-lead text-ink-soft md:col-span-6 md:col-start-7">
-            Twenty-five people, five products and merchants in more than 150 countries. Small
-            enough that what you do is visible, old enough that it has to work.
+            Twenty-five people, four products and merchants in over 150 countries. Small enough
+            that your work is seen. Established enough that it has to work.
           </p>
         </div>
       </section>
@@ -69,9 +69,8 @@ export default function CareersPage() {
           </div>
           <div className="col-span-4 self-end md:col-span-4 md:col-start-9">
             <p className="text-lead text-ink-soft">
-              Most of the studio is in Dhaka, with colleagues in the US and the UAE. Work is
-              organised by team rather than by hours, and the support inbox is everybody’s
-              business at least once a week.
+              Most of us work in Dhaka, with colleagues in the US and the UAE. We organise work by
+              team, not by hours. Everyone reads support messages at least once a week.
             </p>
           </div>
         </div>

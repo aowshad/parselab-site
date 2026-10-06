@@ -7,7 +7,7 @@
 export const company = {
   name: 'ParseLab',
   legal: 'ParseLab LLC',
-  what: 'We build software products for commerce — the parts of a store where customers configure, choose and buy.',
+  what: 'We build software for online stores, where shoppers customise, choose and buy.',
   city: 'Dhaka',
   country: 'Bangladesh',
   timezone: 'UTC+6',

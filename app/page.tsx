@@ -36,8 +36,8 @@ export default function HomePage() {
 
           <div className="mt-10 grid-12 items-end gap-y-8">
             <p className="col-span-4 max-w-measure text-lead text-ink-soft md:col-span-5">
-              Five products for merchants who sell things people configure — designed, built and
-              supported by us.
+              Four products for stores that sell customisable products. We design, build and
+              support them all.
             </p>
             <div className="col-span-4 flex flex-wrap items-center gap-x-8 gap-y-4 md:col-span-5 md:col-start-8 md:justify-end">
               <MagneticButton href="/products">Explore what we build</MagneticButton>
@@ -55,15 +55,14 @@ export default function HomePage() {
           <SectionLabel className="col-span-4 md:col-span-3">Who we are</SectionLabel>
           <div className="col-span-4 md:col-span-9">
             <AnimatedText
-              lines={['We build the part of a store', 'where the customer makes', 'the decisions.']}
+              lines={['We build the part', 'of the store where', 'shoppers decide.']}
               className="wdth-tight text-display"
             />
             <Reveal className="mt-10 max-w-measure-wide" delay={1}>
               <p className="text-lead text-ink-soft">
-                A product company, not an agency. Fifteen years on one narrow problem: most
-                commerce software assumes a product is a fixed thing on a shelf, and a great deal
-                of what people actually buy is printed, sized, engraved, bundled or personalised
-                first. Everything we make lives in that gap — and we own and run all of it.
+                We are a product company, not an agency. Most store software treats products as
+                ready-made, but many are printed, engraved or personalised first. We have worked on
+                that problem for fifteen years, and we own and run everything we make.
               </p>
             </Reveal>
             <Reveal className="mt-8" delay={2}>
@@ -78,7 +77,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-12 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">What we do</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-7">
-            Four kinds of work, all of it pointed at products we own.
+            Four kinds of work, all for our own products.
           </h2>
         </div>
         <Capabilities />
@@ -98,7 +97,7 @@ export default function HomePage() {
           <div className="grid-12 mb-14 gap-y-6 md:mb-20">
             <SectionLabel className="col-span-4 md:col-span-3">Products</SectionLabel>
             <h2 className="col-span-4 max-w-[20ch] text-title wdth-tight md:col-span-6">
-              Five products, all of them ours, all of them still shipping.
+              Four products, all built and run by us.
             </h2>
           </div>
           <ProductExplorer />
@@ -113,7 +112,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-12 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">Who uses it</SectionLabel>
           <h2 className="col-span-4 max-w-[24ch] text-title wdth-tight md:col-span-7">
-            Merchants in more than 150 countries, from single-person shops to established brands.
+            Merchants in more than 150 countries, from solo shops to big brands.
           </h2>
         </div>
         <BrandField />
@@ -132,7 +131,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-14 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">The organisation</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-7">
-            Twenty-five people, organised by what they are responsible for.
+            Twenty-five people in teams, each with a clear job.
           </h2>
         </div>
         <TeamsOverview />
@@ -153,7 +152,7 @@ export default function HomePage() {
           <PeopleStrip />
         </div>
         <div className="mt-8 flex items-baseline justify-between gap-4">
-          <p className="meta">Design, engineering, content, marketing, operations — one release cycle.</p>
+          <p className="meta">Design, engineering, content, marketing and operations, working as one team.</p>
           <ArrowLink href="/teams">Meet everyone</ArrowLink>
         </div>
       </section>
@@ -163,7 +162,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-14 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">What we do together</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-7">
-            Conferences, community meetups and the things we run ourselves.
+            Conferences, meetups and events we run ourselves.
           </h2>
         </div>
         <EventStory />
@@ -177,7 +176,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-14 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">Where we are</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-7">
-            Three offices, one release cycle, and a working day that barely closes.
+            Three offices that cover most of the working day.
           </h2>
         </div>
         <GlobalPresence />
@@ -188,7 +187,7 @@ export default function HomePage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-10 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">What we think about</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-6">
-            Notes from building, mostly written after something broke.
+            Notes on building software, often written after something broke.
           </h2>
         </div>
         <InsightsList />

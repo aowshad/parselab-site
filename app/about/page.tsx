@@ -42,7 +42,7 @@ export default function AboutPage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-14 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">Where it started</SectionLabel>
           <h2 className="col-span-4 max-w-[20ch] text-title wdth-tight md:col-span-7">
-            Every company begins with somebody deciding the existing options were not good enough.
+            Every company starts when someone decides the existing options are not good enough.
           </h2>
         </div>
         <FounderStory />
@@ -54,7 +54,7 @@ export default function AboutPage() {
           <div className="grid-12 gap-y-6 border-t border-rule pt-10">
             <SectionLabel className="col-span-4 md:col-span-3">How we got here</SectionLabel>
             <h2 className="col-span-4 max-w-[20ch] text-title wdth-tight md:col-span-6">
-              Fifteen years, told honestly rather than heroically.
+              Fifteen years, told honestly.
             </h2>
           </div>
         </div>
@@ -99,7 +99,7 @@ export default function AboutPage() {
         <div className="grid-12 gap-y-8 border-t border-rule pb-14 pt-10">
           <SectionLabel className="col-span-4 md:col-span-3">Where we work</SectionLabel>
           <h2 className="col-span-4 max-w-[22ch] text-title wdth-tight md:col-span-7">
-            Bangladesh, the United States and the UAE — covering most of a merchant’s day.
+            Offices in Bangladesh, the United States and the UAE.
           </h2>
         </div>
         <GlobalPresence />
@@ -122,7 +122,7 @@ export default function AboutPage() {
       {/* 09 — Closing */}
       <section className="shell py-section">
         <AnimatedText
-          lines={['The apps are the', 'output. The people', 'are the company.']}
+          lines={['The apps are what we make.', 'The people are the company.']}
           className="wdth-tight text-display"
         />
         <Reveal className="mt-12" delay={1}>

@@ -19,7 +19,7 @@ export type Entry = {
 export const journal: Entry[] = [
   {
     id: 'j1',
-    title: 'What breaks when you put a design canvas inside someone else’s theme',
+    title: 'What breaks when a design tool runs inside someone else’s theme',
     kind: 'Engineering',
     date: '[Date]',
     readingTime: '[—] min',
@@ -28,7 +28,7 @@ export const journal: Entry[] = [
   },
   {
     id: 'j2',
-    title: 'Shopify’s variant limit is a design constraint, not a bug',
+    title: 'Shopify’s variant limit is a design limit, not a bug',
     kind: 'Product',
     date: '[Date]',
     readingTime: '[—] min',
@@ -37,7 +37,7 @@ export const journal: Entry[] = [
   },
   {
     id: 'j3',
-    title: 'Reading the support inbox as a design document',
+    title: 'How support messages help us design',
     kind: 'Studio',
     date: '[Date]',
     readingTime: '[—] min',

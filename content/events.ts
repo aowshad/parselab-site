@@ -30,7 +30,7 @@ export const events: EventItem[] = [
     kind: 'Internal',
     upcoming: false,
     summary:
-      'Draft: something the company ran itself — a release day, an anniversary, a team week. The internal ones are worth publishing; they show the company has a life.',
+      'Draft: an event we ran ourselves, such as a release day, anniversary or team week.',
     story: 'Draft: the longer version.',
     draft: true,
     hero: '/life/team-day-pool.jpg',
@@ -50,9 +50,9 @@ export const events: EventItem[] = [
     kind: 'Conference',
     upcoming: true,
     summary:
-      'Draft: what we went to do, and who we wanted to meet. One or two sentences — enough for someone deciding whether to read on.',
+      'Draft: why we went and who we wanted to meet. One or two sentences.',
     story:
-      'Draft: the longer version. What the event was, what our team did there, one specific thing we learned or argued about, and what changed in the products afterwards. Write it the way you would tell a colleague who could not come, not the way a press release would.',
+      'Draft: the full story. What the event was, what our team did, one thing we learned, and what changed in our products afterwards. Write it like you are telling a colleague who could not come.',
     draft: true,
     needsContent: true,
   },
@@ -64,7 +64,7 @@ export const events: EventItem[] = [
     kind: 'Community',
     upcoming: false,
     summary:
-      'Draft: a community or meetup entry. Who organised it, what we contributed — a talk, a workshop, a table — and who we met.',
+      'Draft: a community or meetup event. Who organised it, what we did (a talk, workshop or table) and who we met.',
     story: 'Draft: the longer version.',
     draft: true,
     needsContent: true,
