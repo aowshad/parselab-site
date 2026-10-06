@@ -4,6 +4,8 @@ export type Discipline = {
   /** What this team is responsible for, written as work rather than as a job title. */
   blurb: string;
   count?: number | null;
+  /** /public/team/<id>.webp — 4:3 team-at-work photo shown in the organisation section. */
+  image?: string;
 };
 
 export type Person = {
@@ -25,7 +27,7 @@ export type Person = {
 export const departmentsNeedConfirmation = false;
 
 export const disciplines: Discipline[] = [
-  { id: 'leadership', name: 'Leadership', blurb: 'Sets direction for the studio and answers for what it ships.', count: null },
+  { id: 'leadership', name: 'Leadership', blurb: 'Sets direction for the studio and answers for what it ships.', count: null, image: '/team/leadership.webp' },
   { id: 'interface', name: 'Creative Interface', blurb: 'Product and interface design across every surface a merchant or shopper touches.', count: null },
   { id: 'experience', name: 'Technical Experience', blurb: 'The bridge between design intent and what the storefront can actually render.', count: null },
   { id: 'content', name: 'Content Artisan', blurb: 'Product writing, documentation and the words inside the apps.', count: null },

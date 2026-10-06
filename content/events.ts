@@ -19,8 +19,29 @@ export type EventItem = {
  * Event names, dates and locations are hard facts and stay bracketed — an
  * invented conference is the fastest way to lose a reader's trust. The
  * surrounding copy is drafted so each entry is an edit, not a blank form.
+ * The first entry is the featured one on the home page and /events.
  */
 export const events: EventItem[] = [
+  {
+    slug: 'event-3',
+    name: '[EVENT NAME]',
+    date: '[Month YYYY]',
+    location: 'Dhaka, Bangladesh',
+    kind: 'Internal',
+    upcoming: false,
+    summary:
+      'Draft: something the company ran itself — a release day, an anniversary, a team week. The internal ones are worth publishing; they show the company has a life.',
+    story: 'Draft: the longer version.',
+    draft: true,
+    hero: '/life/team-day-pool.jpg',
+    gallery: [
+      '/life/team-day-hoodies.jpg',
+      '/life/team-day-portrait.jpg',
+      '/life/team-day-garden.jpg',
+      '/life/team-day-bike.jpg',
+    ],
+    needsContent: true,
+  },
   {
     slug: 'event-1',
     name: '[EVENT NAME]',
@@ -44,19 +65,6 @@ export const events: EventItem[] = [
     upcoming: false,
     summary:
       'Draft: a community or meetup entry. Who organised it, what we contributed — a talk, a workshop, a table — and who we met.',
-    story: 'Draft: the longer version.',
-    draft: true,
-    needsContent: true,
-  },
-  {
-    slug: 'event-3',
-    name: '[EVENT NAME]',
-    date: '[Month YYYY]',
-    location: 'Dhaka, Bangladesh',
-    kind: 'Internal',
-    upcoming: false,
-    summary:
-      'Draft: something the company ran itself — a release day, an anniversary, a team week. The internal ones are worth publishing; they show the company has a life.',
     story: 'Draft: the longer version.',
     draft: true,
     needsContent: true,

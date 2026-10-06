@@ -59,9 +59,17 @@ export const beliefs = [
   },
 ];
 
-export const collage = [
-  { slot: 'studio · wide', ratio: '3 / 2', caption: 'Replace with a real photograph of the studio.', span: 'md:col-span-7', offset: '' },
+export const collage: {
+  slot: string;
+  ratio: string;
+  src?: string;
+  alt?: string;
+  caption: string;
+  span: string;
+  offset: string;
+}[] = [
+  { slot: 'studio · wide', ratio: '3 / 2', src: '/life/team-day-pool.jpg', alt: 'Team members posing together in a swimming pool', caption: 'Team day out.', span: 'md:col-span-7', offset: '' },
   { slot: 'detail · screen', ratio: '4 / 5', caption: 'A screen mid-work, not a staged shot.', span: 'md:col-span-4 md:col-start-9', offset: 'md:mt-24' },
-  { slot: 'people · candid', ratio: '1 / 1', caption: 'Two or three people, actually working.', span: 'md:col-span-5 md:col-start-2', offset: 'md:-mt-16' },
+  { slot: 'people · candid', ratio: '1 / 1', src: '/life/team-day-portrait.jpg', alt: 'A man holding a young girl in a garden', caption: 'Families are part of the day.', span: 'md:col-span-5 md:col-start-2', offset: 'md:-mt-16' },
   { slot: 'city · Dhaka', ratio: '16 / 9', caption: 'Where the work happens.', span: 'md:col-span-6 md:col-start-7', offset: 'md:mt-20' },
 ];

@@ -58,7 +58,14 @@ export default function CareersPage() {
       <section className="shell pt-section">
         <div className="grid-12 gap-y-12">
           <div className="col-span-4 md:col-span-7">
-            <ImageFrame slot="studio · working" ratio="3 / 2" hint="1600×1066" sizes="(max-width: 768px) 100vw, 56vw" />
+            <ImageFrame
+              slot="studio · working"
+              src="/life/team-day-garden.jpg"
+              alt="Colleagues and families playing football on a lawn"
+              ratio="3 / 2"
+              hint="1600×1066"
+              sizes="(max-width: 768px) 100vw, 56vw"
+            />
           </div>
           <div className="col-span-4 self-end md:col-span-4 md:col-start-9">
             <p className="text-lead text-ink-soft">

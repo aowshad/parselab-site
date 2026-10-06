@@ -30,6 +30,12 @@ function EventRow({ slug, name, date, location, kind, needsContent }: (typeof ev
 }
 
 export default function EventsPage() {
+  const photoStories = [
+    { slot: 'crowd', src: '/life/team-day-hoodies.jpg', alt: 'Colleagues in black hoodies laughing together in a garden' },
+    { slot: 'stage', src: '/life/team-day-portrait.jpg', alt: 'A man holding a young girl in a garden' },
+    { slot: 'detail', src: '/life/team-day-garden.jpg', alt: 'Colleagues and families playing football on a lawn' },
+    { slot: 'team', src: '/life/team-day-bike.jpg', alt: 'A boy pushing a toddler on a small red bicycle' },
+  ];
   const [featured, ...others] = events;
   const upcoming = others.filter((e) => e.upcoming);
   const past = others.filter((e) => !e.upcoming);
@@ -101,10 +107,17 @@ export default function EventsPage() {
           <SectionLabel className="col-span-4 md:col-span-3">Photo stories</SectionLabel>
         </div>
         <ul className="mt-12 grid-12 gap-y-12">
-          {['crowd', 'stage', 'detail', 'team'].map((s, i) => (
-            <li key={s} className={`col-span-4 ${i % 2 ? 'md:col-span-5 md:col-start-8 md:mt-16' : 'md:col-span-6'}`}>
+          {photoStories.map((s, i) => (
+            <li key={s.slot} className={`col-span-4 ${i % 2 ? 'md:col-span-5 md:col-start-8 md:mt-16' : 'md:col-span-6'}`}>
               <Reveal delay={i}>
-                <ImageFrame slot={`event photo · ${s}`} ratio={i % 2 ? '4 / 5' : '3 / 2'} hint="1600×1066" sizes="(max-width: 768px) 100vw, 45vw" />
+                <ImageFrame
+                  slot={`event photo · ${s.slot}`}
+                  src={s.src}
+                  alt={s.alt}
+                  ratio={i % 2 ? '4 / 5' : '3 / 2'}
+                  hint="1600×1066"
+                  sizes="(max-width: 768px) 100vw, 45vw"
+                />
               </Reveal>
             </li>
           ))}

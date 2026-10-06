@@ -66,6 +66,8 @@ export default function TeamsPage() {
           <div className="col-span-4 md:col-span-6">
             <ImageFrame
               slot="studio · review session"
+              src="/life/team-day-hoodies.jpg"
+              alt="Colleagues in black hoodies laughing together in a garden"
               ratio="4 / 3"
               hint="candid, mid-conversation · 1600×1200"
               sizes="(max-width: 768px) 100vw, 48vw"

@@ -65,6 +65,8 @@ export default function TeamsOverview() {
             >
               <ImageFrame
                 slot={`${team.name} · team at work`}
+                src={team.image}
+                alt={team.image ? `${team.name} team at work` : ''}
                 ratio="4 / 3"
                 hint="candid team photo · 1600×1200"
                 sizes="(max-width: 768px) 100vw, 38vw"

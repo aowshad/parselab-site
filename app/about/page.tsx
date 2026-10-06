@@ -113,7 +113,7 @@ export default function AboutPage() {
         <ul className="mt-14 grid-12 gap-y-12">
           {collage.map((c) => (
             <li key={c.slot} className={`col-span-4 ${c.span} ${c.offset}`}>
-              <ImageFrame slot={c.slot} ratio={c.ratio} caption={c.caption} sizes="(max-width: 768px) 100vw, 45vw" />
+              <ImageFrame slot={c.slot} src={c.src} alt={c.alt} ratio={c.ratio} caption={c.caption} sizes="(max-width: 768px) 100vw, 45vw" />
             </li>
           ))}
         </ul>
